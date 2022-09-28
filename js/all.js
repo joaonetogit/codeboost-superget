@@ -1,0 +1,1 @@
+"use strict";feather.replace(),AOS.init({duration:1400,once:!0}),window.onscroll=function(o){var r=document.querySelector(".s-header");console.log(window.scrollY),200<window.scrollY?r.style.backgroundColor="#27272d":r.style.backgroundColor="transparent"};

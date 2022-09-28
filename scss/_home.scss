@@ -1,0 +1,418 @@
+.s-hero {
+  background: url('../img/bg.jpg') no-repeat top left;
+  background-size: cover;
+  margin-bottom: -15rem;
+
+  @include responsive(max-width, 480px) {
+    padding: 16rem 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .wrapper {
+    @include flex(row, center, space-between);
+    padding: 16rem 0 0;
+
+    @include responsive(max-width, 768px) {
+      flex-direction: column;
+    }
+    .content {
+      @include flex(column, flex-start);
+      width: 100%;
+      max-width: 71.8rem;
+      gap: 8.6rem;
+
+      @include responsive(max-width, 480px) {
+        max-width: 100%;
+      }
+      .text {
+        @include flex(column, flex-start);
+        gap: 2rem;
+        .subtitle {
+          font-family: $font-heading;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 120%;
+          text-transform: uppercase;
+          background: $gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+        .title {
+          font-family: $font-heading;
+          font-weight: 900;
+          font-size: 64px;
+          line-height: 120%;
+          letter-spacing: 0.02em;
+          color: $color-white;
+
+          @include responsive(max-width, 768px) {
+            font-size: 4.8rem;
+          }
+
+          @include responsive(max-width, 480px) {
+            font-size: 6.4rem;
+          }
+        }
+        .description {
+          width: 100%;
+          max-width: 53.9rem;
+          font-family: $font-body;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 150%;
+          color: rgba($color: $color-white, $alpha: 0.7);
+        }
+      }
+      .action {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .row {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          .notion {
+            width: 22.3rem;
+            height: 6.4rem;
+            background: $color-white;
+            border-radius: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            span {
+              font-family: $font-body;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 150%;
+              color: $neutral-200;
+            }
+          }
+        }
+        .enjoy {
+          margin-left: 3rem;
+        }
+      }
+    }
+    .image {
+      position: absolute;
+      top: 10rem;
+      right: 0;
+      width: 100%;
+      max-width: 68rem;
+    }
+  }
+}
+
+.s-how {
+  position: relative;
+  background-color: $color-white;
+  margin-bottom: 9.7rem;
+  .title {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $neutral-100;
+    margin-bottom: 8.2rem;
+  }
+  .features {
+    display: flex;
+    gap: 6rem;
+    &-item {
+      width: 100%;
+      max-width: 24.8rem;
+      display: flex;
+      flex-direction: column;
+      &-icon {
+        width: 6.4rem;
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-title {
+        margin: 4rem 0 2.4rem;
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 120%;
+        color: #27272d;
+      }
+      &-text {
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: $neutral-400;
+      }
+      &-link {
+        font-family: $font-body;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: $secondary;
+        margin-top: 2.4rem;
+      }
+    }
+  }
+}
+
+.s-promo {
+  width: 100%;
+  max-width: 136.8rem;
+  margin: 0 auto;
+  background: url('../img/bg-premios.jpg') no-repeat;
+  background-size: cover;
+  padding: 8.4rem 0 10.6rem;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.6rem;
+
+    .title {
+      width: 100%;
+      max-width: 60.8rem;
+      margin: 0 auto;
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 3.2rem;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+    }
+
+    .promo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.1rem;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3.2rem;
+        width: 28rem;
+        height: 21.1rem;
+        background: rgba($color: $neutral-200, $alpha: 0.8);
+        border-radius: 8px;
+
+        &-icon {
+          width: 4.8rem;
+          height: 4.8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &-text {
+          font-family: $font-heading;
+          font-weight: 600;
+          font-size: 2rem;
+          line-height: 120%;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.s-join {
+  width: 100%;
+  max-width: 130.2rem;
+  margin: 0 auto;
+  background: url('../img/bg-porqueparticipar.jpg') no-repeat;
+  background-size: cover;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8.6rem;
+    padding: 8rem 0 9.6rem;
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      .title {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $color-white;
+      }
+      .description {
+        width: 100%;
+        max-width: 86.4rem;
+        margin: 0 auto;
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        text-align: center;
+        color: $color-white;
+      }
+    }
+
+    .features {
+      display: flex;
+      gap: 6rem;
+
+      &-item {
+        display: flex;
+        gap: 2rem;
+
+        &-icon {
+          margin-top: 0.8rem;
+        }
+        &-text {
+          font-family: $font-body;
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 150%;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.s-infos {
+  .infos {
+    display: flex;
+    gap: 13.7rem;
+    margin-top: 10.4rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      width: 100%;
+      max-width: 48.7rem;
+
+      &-title {
+        font-family: $font-heading;
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: $neutral-200;
+      }
+
+      &-description {
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: $neutral-400;
+
+        a {
+          color: $secondary;
+        }
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        .text {
+          font-family: $font-body;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 150%;
+          color: $neutral-400;
+        }
+      }
+    }
+  }
+}
+
+.s-prefooter {
+  .wrapper {
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 36.5rem;
+      margin: 8rem 0 5.6rem;
+      padding: 5rem 0;
+      border-top: 1.5px solid rgba($color: $neutral-400, $alpha: 0.1);
+      border-bottom: 1.5px solid rgba($color: $neutral-400, $alpha: 0.1);
+      .text-high {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 120%;
+        color: $neutral-200;
+      }
+      .notion {
+        width: 22.3rem;
+        height: 6.4rem;
+        background: $neutral-500;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        span {
+          font-family: $font-body;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 150%;
+          color: $neutral-200;
+        }
+      }
+
+      &-second {
+        display: flex;
+        justify-content: space-between;
+
+        .producer,
+        .support {
+          width: 47%;
+          display: flex;
+          flex-direction: column;
+          gap: 3.5rem;
+          .title {
+            font-family: $font-heading;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 120%;
+            color: $neutral-200;
+          }
+
+          .figures {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
